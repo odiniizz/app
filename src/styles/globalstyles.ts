@@ -1,14 +1,16 @@
 import { StyleSheet } from "react-native"
 
-export const colors = {
-    preto: 'rgb(0, 0, 0)',
-    branco: 'rgb(255, 255, 255'
-
+export const cores = {
+    primary: '#37474F',
+    secondary: '#C51162',
+    third: '#D9D9D9',
+    black: '#000',
+    white: '#FFF'
 }
 
 export const styles = StyleSheet.create({
     textoTitulo: {
-        color: colors.preto,
+        color: cores.black,
         fontSize: 75,
         textAlign: 'center',
     },
