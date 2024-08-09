@@ -15,6 +15,14 @@ export const styles = StyleSheet.create({
         textAlign: 'center',
     },
 
+    textoPaginas: {
+        color: cores.black,
+        fontSize: 40,
+        fontFamily:'',
+        textAlign: 'center',
+        textAlignVertical: 'bottom',
+    },
+
     textoBotao: {
         
     }

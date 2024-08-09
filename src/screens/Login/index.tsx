@@ -4,7 +4,7 @@ import { MaterialIcons, Entypo } from "@expo/vector-icons";
 import { styles } from './styles';
 import { colors } from '../../styles/colors';
 import { ComponentButtonInterface } from '../../components';
-import { LoginTypes } from '../../navigations/login.navigation';
+import { LoginTypes } from '../../navigation/login.navigation';
 export interface IAuthenticate {
     email?: string;
     password?: string;
@@ -26,12 +26,18 @@ export function Login({ navigation }: LoginTypes) {
     }
     return (
         <View style={styles.container}>
+            <View>
+                <Text>Imagem aqui</Text>
+            </View>
+
+            <View style ={styles.tudo}>
+            <Text style={styles.titulo}>Doces</Text>
             <KeyboardAvoidingView>
-                <Text style={styles.title}>Login</Text>
+                <Text style={styles.titulo}>Faça seu login! </Text>
                 <View style={styles.formRow}>
                     <MaterialIcons name="email" style={styles.icon} />
                     <TextInput
-                        placeholderTextColor={colors.third}
+                        placeholderTextColor={colors.black}
                         style={styles.input}
                         placeholder="Email"
                         keyboardType="email-address"
@@ -42,7 +48,7 @@ export function Login({ navigation }: LoginTypes) {
                 <View style={styles.formRow}>
                     <Entypo name="key" style={styles.icon} />
                     <TextInput
-                        placeholderTextColor={colors.third}
+                        placeholderTextColor={colors.black}
                         style={styles.input}
                         placeholder="Senha"
                         secureTextEntry={true}
@@ -53,6 +59,7 @@ export function Login({ navigation }: LoginTypes) {
                 <ComponentButtonInterface title='Login' type='primary' onPressI={handleSignIn} />
                 <ComponentButtonInterface title='Cadastre-se' type='secondary' onPressI={handleRegister} />
             </KeyboardAvoidingView>
+            </View>
         </View>
     );
 }

@@ -3,7 +3,7 @@ import { KeyboardAvoidingView, View, Text, TextInput, Alert } from 'react-native
 import { MaterialIcons, Entypo, Ionicons } from "@expo/vector-icons";
 import { styles } from './styles';
 import { colors } from '../../styles/colors';
-import { LoginTypes } from '../../navigations/login.navigation';
+import { LoginTypes } from '../../navigation/login.navigation';
 import { ComponentButtonInterface } from '../../components';
 export interface IRegister {
     name?: string
@@ -27,12 +27,13 @@ export function Register({ navigation }: LoginTypes) {
     }
     return (
         <View style={styles.container}>
+            <View style ={styles.tudo}>
             <KeyboardAvoidingView>
-                <Text style={styles.title}>Cadastre-se</Text>
+                <Text style={styles.title}>Ainda não tem uma conta? Cadastre-se!</Text>
                 <View style={styles.formRow}>
                     <Ionicons name="person" style={styles.icon} />
                     <TextInput
-                        placeholderTextColor={colors.third}
+                        placeholderTextColor={colors.black}
                         style={styles.input}
                         placeholder="Nome"
                         onChangeText={(i) => handleChange({ name: i })}
@@ -41,7 +42,7 @@ export function Register({ navigation }: LoginTypes) {
                 <View style={styles.formRow}>
                     <MaterialIcons name="email" style={styles.icon} />
                     <TextInput
-                        placeholderTextColor={colors.third}
+                        placeholderTextColor={colors.black}
                         style={styles.input}
                         placeholder="Email"
                         keyboardType="email-address"
@@ -52,7 +53,7 @@ export function Register({ navigation }: LoginTypes) {
                 <View style={styles.formRow}>
                     <Entypo name="key" style={styles.icon} />
                     <TextInput
-                        placeholderTextColor={colors.third}
+                        placeholderTextColor={colors.black}
                         style={styles.input}
                         placeholder="Senha"
                         secureTextEntry={true}
@@ -63,6 +64,7 @@ export function Register({ navigation }: LoginTypes) {
                 <ComponentButtonInterface title='Salvar' type='secondary' onPressI={handleRegister} />
                 <ComponentButtonInterface title='Voltar' type='primary' onPressI={handleGoBack} />
             </KeyboardAvoidingView>
+            </View>
 </View>
     );
 }

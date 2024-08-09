@@ -4,7 +4,8 @@ export const styles = StyleSheet.create({
     container: {
         flex: 1,
         alignItems: "center",
-        justifyContent: "center"
+        justifyContent: "center",
+        backgroundColor: "white"
     },
 
     title: {
@@ -34,4 +35,8 @@ export const styles = StyleSheet.create({
         padding: 10,
         width: "70%"
     },
+
+    tudo: {
+        paddingTop: 250
+    }
 })
