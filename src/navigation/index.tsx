@@ -7,7 +7,7 @@ import { LoginNavigation } from './login.navigation'
 export function Navigation(){
     return(
         <NavigationContainer>
-            <LoginNavigation />
+            <MenuTabs/>
         </NavigationContainer>
     );
 }

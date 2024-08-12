@@ -2,10 +2,10 @@ import { Text, TouchableOpacity, View } from "react-native";
 import { styles } from "../../styles/globalstyles"
 import { MenuTabTypes } from "../../navigation/MenuBottomTab.navigation";
 
-export function TelaP({ navigation }: MenuTabTypes) {
+export function Perfil({ navigation }: MenuTabTypes) {
     return (
         <View>
-            <Text style={styles.textoTitulo}>Seja bem vindo ao app</Text>
+            <Text style={styles.textoPaginas}>Bateu aquela vontade de comer um docinho, né?</Text>
         </View>
 
     );

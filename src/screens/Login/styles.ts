@@ -38,5 +38,14 @@ export const styles = StyleSheet.create({
 
     tudo: {
         paddingTop: 250
+    },
+
+    logo: {
+        height: 100,
+        width: 100
+    },
+
+    doce: {
+        paddingTop: 50
     }
 })

@@ -9,9 +9,13 @@ export const cores = {
 }
 
 export const styles = StyleSheet.create({
+
+    viewTitulo:{
+        alignContent: "center"
+    },
     textoTitulo: {
         color: cores.black,
-        fontSize: 75,
+        fontSize: 60,
         textAlign: 'center',
     },
 

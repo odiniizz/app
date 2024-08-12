@@ -1,6 +1,6 @@
 import { api } from "../../api";
 
-export interface Iuser {
+export interface IUser {
     name?: string
     email?: string
     password?: string

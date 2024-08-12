@@ -1,19 +1,30 @@
 import React, { useState } from 'react';
-import { KeyboardAvoidingView, View, Text, TextInput, Alert } from 'react-native';
+import { KeyboardAvoidingView, View, Image, Text, TextInput, Alert } from 'react-native';
 import { MaterialIcons, Entypo } from "@expo/vector-icons";
 import { styles } from './styles';
 import { colors } from '../../styles/colors';
 import { ComponentButtonInterface } from '../../components';
 import { LoginTypes } from '../../navigation/login.navigation';
+import { useAuth} from '../../hook/auth';
+import { AxiosError } from 'axios';
 export interface IAuthenticate {
     email?: string;
     password?: string;
 }
 export function Login({ navigation }: LoginTypes) {
     const [data, setData] = useState<IAuthenticate>();
+    const { signIn, setLoading } = useAuth()
     async function handleSignIn() {
         if (data?.email && data.password) {
-            console.log(data)
+            setLoading(true)
+            try {
+                await signIn (data)
+            } catch (error) {
+                const err = error as AxiosError
+                const msg = err.response?.data as string
+                Alert.alert(msg)
+            }
+            setLoading(false)
         } else {
             Alert.alert("Preencha todos os campos!!!");
         }
@@ -24,10 +35,11 @@ export function Login({ navigation }: LoginTypes) {
     function handleChange(item: IAuthenticate) {
         setData({ ...data, ...item });
     }
+    const logo = require("../../img/docin.png")
     return (
         <View style={styles.container}>
-            <View>
-                <Text>Imagem aqui</Text>
+            <View style={styles.doce}>
+                <Image source={logo} style={styles.logo}/>
             </View>
 
             <View style ={styles.tudo}>
