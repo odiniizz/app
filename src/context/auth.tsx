@@ -1,9 +1,10 @@
-import { IAuthenticated, IUser } from '../services/data/User'
-import React, { createContext, useState, useCallback, ReactNode, useEffect, Dispatch, SetStateAction } from 'react'
+import { IAuthenticated, IUser } from "../services/data/User";
+import * as React from 'react';
+import { createContext, useState, useCallback, ReactNode, useEffect, Dispatch, SetStateAction } from "react";
 import { api } from '../services/api'
-import { apiUser } from '../services/data'
+import { apiUser } from "../services/data";
 import { isAfter, parseISO } from 'date-fns'
-import AsyncStorage from '@react-native-async-storage/async-storage'
+import AsyncStorage from "@react-native-async-storage/async-storage";
 
 export interface IAuthContextData {
     signIn(credentials: IUser): Promise<void>
@@ -15,23 +16,24 @@ export interface IAuthContextData {
 export interface IProvider {
     children: ReactNode
 }
+
 const AuthContext = createContext<IAuthContextData>({} as IAuthContextData)
 const AuthProvider = ({ children }: IProvider) => {
     const [auth, setAuth] = useState<IAuthenticated>({} as IAuthenticated)
     const [loading, setLoading] = useState(false)
-
+    
     const signIn = useCallback(async ({ email, password }: IUser) => {
         const response = await apiUser.login({ email, password })
         const user = response.data
-        api.defaults.headers.common.Authorization = `Bearer ${user.token ? user.token.token:""}`
+        api.defaults.headers.common.Authorization = `Bearer ${user.token ? user.token.token : ""}`
         setAuth({ ...user })
         await AsyncStorage.setItem("user", JSON.stringify({ ...user }))
     }, [])
-
+    
     const removeLocalStorage = useCallback(async () => {
         await AsyncStorage.removeItem("user")
     }, [])
-
+    
     const signOut = useCallback(async () => {
         setAuth({} as IAuthenticated)
         await removeLocalStorage()
@@ -71,7 +73,7 @@ const AuthProvider = ({ children }: IProvider) => {
             }}
         >
             {children}
-        </AuthContext.Provider>
-    )
+        </AuthContext.Provider >
+    )   
 }
 export { AuthProvider, AuthContext }
