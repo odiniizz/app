@@ -23,7 +23,7 @@ const AuthProvider = ({ children }: IProvider) => {
     const signIn = useCallback(async ({ email, password }: IUser) => {
         const response = await apiUser.login({ email, password })
         const user = response.data
-        api.defaults.headers.common.Authorization = 'Bearer ${user.token ? user.token.token:""}'
+        api.defaults.headers.common.Authorization = `Bearer ${user.token ? user.token.token:""}`
         setAuth({ ...user })
         await AsyncStorage.setItem("user", JSON.stringify({ ...user }))
     }, [])

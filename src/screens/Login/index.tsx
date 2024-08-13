@@ -16,30 +16,35 @@ export interface IAuthenticate {
 }
 export function Login({ navigation }: LoginTypes) {
     const [data, setData] = useState<IAuthenticate>();
-    const { signIn, setLoading } = useAuth()
+    const {signIn, setLoading} = useAuth()
+
     async function handleSignIn() {
         if (data?.email && data.password) {
-            setLoading(true)
+            console.log(data)
             try {
-                await signIn (data)
+                await signIn(data)
             } catch (error) {
                 const err = error as AxiosError
                 const msg = err.response?.data as string
-                Alert.alert(msg)
+                Alert.alert(msg)            
+                console.log(err)
+
             }
-            setLoading(false)
         } else {
-            Alert.alert("Preencha todos os campos!!!");
+            Alert.alert("Preencha todos os campos!!!")
         }
     }
+
     function handleRegister() {
-        navigation.navigate('Register')
+        navigation.navigate("Register")
     }
+
     function handleChange(item: IAuthenticate) {
         setData({ ...data, ...item });
     }
     
     const logo = require("../../img/docin.png")
+
     return (
         <View style={styles.container}>
             <View style={styles.doce}>
