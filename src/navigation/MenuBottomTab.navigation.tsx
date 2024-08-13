@@ -1,21 +1,21 @@
 import { createBottomTabNavigator, BottomTabNavigationProp } from "@react-navigation/bottom-tabs";
-import { ScreenTelaInicial, ScreenGeral, ScreenPerfil, ScreenMensagem} from '../screens';
+import { ScreenTelaInicial, ScreenReceitas, ScreenPerfil, ScreenMensagem} from '../screens';
 import { colors } from '../styles/colors'
-import { Entypo, Feather } from "@expo/vector-icons";
+import { Ionicons } from "@expo/vector-icons";
 
-type TabParamList = {
-    TelaInicial: undefined
-    Geral: undefined
-    Perfil: undefined
+type MenuTabParam = {
+    Home: undefined
+    Receitas: undefined
     Mensagem: undefined
+    Perfil: undefined
 }
-type MenuScreenNavigation = BottomTabNavigationProp<TabParamList, "TelaInicial">
+type MenuScreenNavigation = BottomTabNavigationProp<MenuTabParam, "Home">
 export type MenuTabTypes = {
     navigation: MenuScreenNavigation
 }
 
 export function MenuTabs() {
-    const Tab = createBottomTabNavigator<TabParamList>();
+    const Tab = createBottomTabNavigator<MenuTabParam>();
     return (
         <Tab.Navigator
         screenOptions={{
@@ -26,34 +26,34 @@ export function MenuTabs() {
             tabBarInactiveTintColor: colors.white,
         }}
         >
-            <Tab.Screen name="Tela Inicial" component={ScreenTelaInicial}
+            <Tab.Screen name="Home" component={ScreenTelaInicial}
                 options={{
                     tabBarIcon: () => (
-                        <Entypo name="home" size={24} color="black" />
-                    )
+                        <Ionicons name="home" size={24} color="black" />
+                    ),
                 }}
             />
-            <Tab.Screen name="Geral" component={ScreenGeral}
+            <Tab.Screen name="Receitas" component={ScreenReceitas}
                 options={{
                     tabBarIcon: () => (
-                        <Feather name="list" size={24} color="black" />
-                    )
-                }}
-            />
-            <Tab.Screen name="Perfil" component={ScreenPerfil}
-                options={{
-                    tabBarIcon: () => (
-                        <Feather name="user" size={24} color="black" />
-                    )
+                        <Ionicons name="list" size={24} color="black" />
+                    ),
                 }}
             />
             <Tab.Screen name="Mensagem" component={ScreenMensagem}
                 options={{
                     tabBarIcon: () => (
-                        <Feather name="mail" size={24} color="black" />
-                    )
+                        <Ionicons name="mail" size={24} color="black" />
+                    ),
+                }}
+            />
+            <Tab.Screen name="Perfil" component={ScreenPerfil}
+                options={{
+                    tabBarIcon: () => (
+                        <Ionicons name="person" size={24} color="black" />
+                    ),
                 }}
             />
         </Tab.Navigator>
-    );
+    )
 }

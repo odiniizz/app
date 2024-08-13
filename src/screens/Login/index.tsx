@@ -3,10 +3,13 @@ import { KeyboardAvoidingView, View, Image, Text, TextInput, Alert } from 'react
 import { MaterialIcons, Entypo } from "@expo/vector-icons";
 import { styles } from './styles';
 import { colors } from '../../styles/colors';
+
 import { ComponentButtonInterface } from '../../components';
 import { LoginTypes } from '../../navigation/login.navigation';
+
 import { useAuth} from '../../hook/auth';
 import { AxiosError } from 'axios';
+
 export interface IAuthenticate {
     email?: string;
     password?: string;
@@ -30,11 +33,12 @@ export function Login({ navigation }: LoginTypes) {
         }
     }
     function handleRegister() {
-        navigation.navigate("Register")
+        navigation.navigate('Register')
     }
     function handleChange(item: IAuthenticate) {
         setData({ ...data, ...item });
     }
+    
     const logo = require("../../img/docin.png")
     return (
         <View style={styles.container}>
