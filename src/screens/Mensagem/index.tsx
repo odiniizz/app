@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { View, Text, ImageBackground, TouchableOpacity } from "react-native";
-import { styles } from "./styled"
+import { styles } from "./styles"
 import { useAuth } from "../../hook/auth";
 import { apiMessage } from "../../services/data";
-import { IResponseMessage } from "../../services/data/Message";
+import { IResponseMessage } from "../../services/data/Mensagem";
 import { FlatList } from "react-native-gesture-handler";
-import { styleContainer } from "../../styles/globalstyle"
+import { styleContainer } from "../../styles/globalstyles"
 import { MessageTypes } from "../../navigations/menssage.navigaton";
 import { colors } from "../../styles/colors";
 import { AntDesign } from "@expo/vector-icons";
