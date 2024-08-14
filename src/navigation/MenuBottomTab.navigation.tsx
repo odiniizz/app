@@ -2,6 +2,7 @@ import { createBottomTabNavigator, BottomTabNavigationProp } from "@react-naviga
 import { ScreenTelaInicial, ScreenReceitas, ScreenPerfil, ScreenMensagem} from '../screens';
 import { colors } from '../styles/colors'
 import { Ionicons } from "@expo/vector-icons";
+import { MessageNavigation } from "./message.navigation"
 
 type MenuTabParam = {
     Home: undefined
@@ -40,7 +41,7 @@ export function MenuTabs() {
                     ),
                 }}
             />
-            <Tab.Screen name="Mensagem" component={ScreenMensagem}
+            <Tab.Screen name="Mensagem" component={MessageNavigation}
                 options={{
                     tabBarIcon: () => (
                         <Ionicons name="mail" size={24} color="black" />

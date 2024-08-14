@@ -8,7 +8,7 @@ export const cores = {
     white: '#FFF'
 }
 
-export const styles = StyleSheet.create({
+export const stylesglobal = StyleSheet.create({
 
     viewTitulo:{
         alignContent: "center"

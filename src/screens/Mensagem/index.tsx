@@ -5,13 +5,12 @@ import { useAuth } from "../../hook/auth";
 import { apiMessage } from "../../services/data";
 import { IResponseMessage } from "../../services/data/Mensagem";
 import { FlatList } from "react-native-gesture-handler";
-import { styleContainer } from "../../styles/globalstyles"
-import { MessageTypes } from "../../navigations/menssage.navigaton";
+import { stylesglobal, cores } from "../../styles/globalstyles"
+import { MessageTypes } from "../../navigation/message.navigation";
 import { colors } from "../../styles/colors";
 import { AntDesign } from "@expo/vector-icons";
 
 export function Mensagem({ navigation }: MessageTypes) {
-    const slide = require('../../asset/img 4.png')
     const [message, setMessage] = useState<IResponseMessage[]>([])
     const { setLoading } = useAuth()
     useEffect(() => {
@@ -28,15 +27,14 @@ export function Mensagem({ navigation }: MessageTypes) {
     }
     const renderItem = (({ item }: itemMessage) => {
         return (
-            <View style={styles.item}>
-                <Text style={styles.itemText}>Nome: {item.user.name}</Text>
-                <Text style={styles.itemText}>Título: {item.title}</Text>
-                <Text style={styles.itemText}>Mensagem: {item.message}</Text>
+            <View>
+                <Text>Nome: {item.user.name}</Text>
+                <Text>Título: {item.title}</Text>
+                <Text>Mensagem: {item.message}</Text>
             </View>
         )
     })
-    return(
-        <ImageBackground source={slide} style={styleContainer.container}>
+    return (
             <View style={styles.container}>
                 {
                     message.length > 0 && (
@@ -47,11 +45,10 @@ export function Mensagem({ navigation }: MessageTypes) {
                         />
                     )
                 }
-            </View>
-            <TouchableOpacity style={styles.botao}
+            <TouchableOpacity
                 onPress={() => navigation.navigate("CadMessage")}>
-                <AntDesign name="pluscircle" size={48} color={colors.branco} />
+                <AntDesign name="pluscircle" size={48} color={cores.white} />
             </TouchableOpacity>
-        </ImageBackground>
+            </View>
     )
 }
