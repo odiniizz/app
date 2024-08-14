@@ -14,7 +14,6 @@ export interface IResponseMessage {
         id: number
         name: string
         email: string
-        .
     }
 }
 class MessageData {
