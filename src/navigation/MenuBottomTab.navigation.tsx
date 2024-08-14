@@ -1,5 +1,5 @@
 import { createBottomTabNavigator, BottomTabNavigationProp } from "@react-navigation/bottom-tabs";
-import { ScreenTelaInicial, ScreenReceitas, ScreenPerfil, ScreenMensagem} from '../screens';
+import { ScreenTelaInicial, ScreenReceitas, ScreenPerfil } from '../screens';
 import { colors } from '../styles/colors'
 import { Ionicons } from "@expo/vector-icons";
 import { MessageNavigation } from "./message.navigation"

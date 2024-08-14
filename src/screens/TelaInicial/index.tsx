@@ -1,12 +1,12 @@
 import { Text, TouchableOpacity, View } from "react-native";
-import { styles } from "../../styles/globalstyles"
+import { stylesglobal } from "../../styles/globalstyles"
 import { MenuTabTypes } from "../../navigation/MenuBottomTab.navigation";
 
 export function TelaInicial({ navigation }: MenuTabTypes) {
     return (
         <>
-        <View style={styles.viewTitulo}>
-            <Text style={styles.textoTitulo}>Seja bem vindo ao app!</Text>
+        <View style={stylesglobal.viewTitulo}>
+            <Text style={stylesglobal.textoTitulo}>Seja bem vindo ao app!</Text>
         </View>
 
         <View>

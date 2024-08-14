@@ -26,8 +26,6 @@ export function CadMensagem({ navigation }: MessageTypes) {
             } catch (error) {
                 const err = error as AxiosError
                 console.log(err)
-                // const msg = err.response?.data as string
-                // Alert.alert(msg)
             }
             setLoading(false)
         } else {

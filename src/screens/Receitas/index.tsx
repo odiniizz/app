@@ -1,11 +1,11 @@
 import { Text, TouchableOpacity, View } from "react-native";
-import { styles } from "../../styles/globalstyles"
+import { stylesglobal } from "../../styles/globalstyles"
 import { MenuTabTypes } from "../../navigation/MenuBottomTab.navigation";
 
 export function Receitas({ navigation }: MenuTabTypes) {
     return (
         <View>
-            <Text style={styles.textoPaginas}>Bateu aquela vontade de comer um docinho, né?</Text>
+            <Text style={stylesglobal.textoPaginas}>Bateu aquela vontade de comer um docinho, né?</Text>
         </View>
 
     );
