@@ -1,5 +1,5 @@
 import { createBottomTabNavigator, BottomTabNavigationProp } from "@react-navigation/bottom-tabs";
-import { ScreenTelaInicial, ScreenReceitas, ScreenPerfil } from '../screens';
+import { ScreenTelaInicial, ScreenReceitas, ScreenPerfil, ScreenCamera } from '../screens';
 import { colors } from '../styles/colors'
 import { Ionicons } from "@expo/vector-icons";
 import { MessageNavigation } from "./message.navigation"
@@ -9,6 +9,7 @@ type MenuTabParam = {
     Receitas: undefined
     Mensagem: undefined
     Perfil: undefined
+    Camera: undefined
 }
 type MenuScreenNavigation = BottomTabNavigationProp<MenuTabParam, "Home">
 export type MenuTabTypes = {
@@ -52,6 +53,13 @@ export function MenuTabs() {
                 options={{
                     tabBarIcon: () => (
                         <Ionicons name="person" size={24} color="black" />
+                    ),
+                }}
+            />
+            <Tab.Screen name="Camera" component={ScreenCamera}
+                options={{
+                    tabBarIcon: () => (
+                        <Ionicons name="camera" size={24} color="black" />
                     ),
                 }}
             />
