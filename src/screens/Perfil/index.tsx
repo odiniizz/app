@@ -9,13 +9,17 @@ export function Perfil() {
     const { user, signOut } = useAuth()
     return (
         <View style={styles.container}>
+            <View style={stylesglobal.cabecalho}>
+                <Text style={stylesglobal.textoTitulo}>Perfil</Text>
+            </View>
+
             <View>
                 <Text style={styles.name}>{user?.user.name}</Text>
             </View>
             <   View>
-                <View style={stylesglobal.sociais}>
+                <View style={styles.sociais}>
                     <FontAwesome5 name="instagram" size={24} color="black" />
-                    <Text style={styles.sociaisText}>https://www.instagram.com/</Text>
+                    <Text style={styles.textoSociais}>https://www.instagram.com/</Text>
                 </View>
             </View >
             <ComponentButtonInterface title="Sair" type="primary"

@@ -11,7 +11,15 @@ export const styles = StyleSheet.create({
         fontWeight: "bold"
     },
 
-    sociaisText: {
+    textoSociais: {
         marginLeft: 5
-    }
+    },
+
+    sociais: {
+        backgroundColor: colors.third,
+        marginBottom: 20,
+        flexDirection: "row",
+        padding: 10,
+        borderRadius: 10
+    },
 })

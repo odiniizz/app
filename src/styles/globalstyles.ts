@@ -24,7 +24,8 @@ export const stylesglobal = StyleSheet.create({
     caixaDeTexto: {
         alignSelf: "center",
         width: 350,
-        paddingTop: 160
+        paddingTop: 90,
+        paddingBottom: 30
     },
 
     titulo: {
@@ -38,13 +39,37 @@ export const stylesglobal = StyleSheet.create({
         textAlign: 'center',
     },
 
-    sociais: {
-        backgroundColor: colors.third,
-        marginBottom: 20,
+    caixaDeInformacao: {
+        width: 250,
+        backgroundColor: colors.secondary,
+        borderRadius: 10,
+        alignSelf: "center",
         flexDirection: "row",
-        padding: 10,
-        borderRadius: 10
+        alignItems: "center",
+        justifyContent: "space-between",
+        marginVertical: 20
     },
 
+    textoInformacao: {
+
+    },
+
+    caixaTextoInformacao: {
+        paddingEnd: 10
+    },
+
+    doce: {
+        height: 100,
+        width: 100
+    },
+
+    caixaDoce: {
+        paddingStart: 10
+    },
+
+    secao: {
+
+        justifyContent: "space-between"
+    }
 
 })
