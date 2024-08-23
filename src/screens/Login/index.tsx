@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { KeyboardAvoidingView, View, Text, TextInput, Alert } from 'react-native';
+import { KeyboardAvoidingView, View, Text, Image, TextInput, Alert } from 'react-native';
 import { MaterialIcons, Entypo } from "@expo/vector-icons";
 import { styles } from './styles';
 import { colors } from '../../styles/colors';
@@ -43,8 +43,11 @@ export function Login({ navigation }: LoginTypes) {
     return (
 
             <View style={styles.container}>
+                    <Image source={require('../../img/docin.png')} style={styles.img}/>
                 <KeyboardAvoidingView>
-                    <Text>Please Sing In</Text>
+                    <Text style={styles.login}>Seja bem vindo ao app! <br />
+                    Faça seu login ou cadastre-se!
+                    </Text>
                     <View style={styles.formRow}>
                         <MaterialIcons name="email" style={styles.icon} />
                         <TextInput

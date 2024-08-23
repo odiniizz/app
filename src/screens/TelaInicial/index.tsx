@@ -6,7 +6,7 @@ export function TelaInicial({ navigation }: MenuTabTypes) {
     return (
         <>
         <View style={stylesglobal.viewTitulo}>
-            <Text style={stylesglobal.textoTitulo}>Seja bem vindo ao app!</Text>
+            <Text style={stylesglobal.textoTitulo}>Docitos</Text>
         </View>
 
         <View>
