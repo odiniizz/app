@@ -5,12 +5,12 @@ import { MenuTabTypes } from "../../navigation/MenuBottomTab.navigation";
 export function TelaInicial({ navigation }: MenuTabTypes) {
     return (
         <>
-        <View style={stylesglobal.viewTitulo}>
+        <View style={stylesglobal.cabecalho}>
             <Text style={stylesglobal.textoTitulo}>Docitos</Text>
         </View>
 
-        <View>
-            <Text>Aqui, você encontrará diversas receitas!</Text>
+        <View style={stylesglobal.caixaDeTexto}>
+            <Text style={stylesglobal.textoConteudo}>Aqui, você encontrará diversas receitas rápidas e simples para matar sua vontade de doce!</Text>
         </View>
         </>
 

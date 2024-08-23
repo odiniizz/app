@@ -1,4 +1,5 @@
-import { StyleSheet } from "react-native"
+import { StyleSheet } from "react-native";
+import { colors } from "./colors";
 
 export const cores = {
     primary: '#37474F',
@@ -10,24 +11,40 @@ export const cores = {
 
 export const stylesglobal = StyleSheet.create({
 
-    viewTitulo:{
-        alignContent: "center"
+    cabecalho:{
+        alignSelf: "center"
     },
+
     textoTitulo: {
         color: cores.black,
         fontSize: 60,
         textAlign: 'center',
     },
 
-    textoPaginas: {
-        color: cores.black,
-        fontSize: 40,
-        fontFamily:'',
-        textAlign: 'center',
-        textAlignVertical: 'bottom',
+    caixaDeTexto: {
+        alignSelf: "center",
+        width: 350,
+        paddingTop: 160
     },
 
-    textoBotao: {
-        
-    }
+    titulo: {
+        textAlign: "justify",
+    },
+
+    textoConteudo: {
+        color: cores.black,
+        fontSize: 22,
+        fontFamily:'',
+        textAlign: 'center',
+    },
+
+    sociais: {
+        backgroundColor: colors.third,
+        marginBottom: 20,
+        flexDirection: "row",
+        padding: 10,
+        borderRadius: 10
+    },
+
+
 })

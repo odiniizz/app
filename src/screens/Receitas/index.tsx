@@ -4,9 +4,13 @@ import { MenuTabTypes } from "../../navigation/MenuBottomTab.navigation";
 
 export function Receitas({ navigation }: MenuTabTypes) {
     return (
-        <View>
-            <Text style={stylesglobal.textoPaginas}>Bateu aquela vontade de comer um docinho, né?</Text>
+        <>
+        <View style={stylesglobal.cabecalho}>
+            <Text style={stylesglobal.textoTitulo}>Receitas</Text>
         </View>
-
+        <View style={stylesglobal.caixaDeTexto}>
+            <Text style={stylesglobal.textoConteudo}>Bateu aquela vontade de comer um docinho, né?</Text>
+        </View>
+        </>
     );
 }
