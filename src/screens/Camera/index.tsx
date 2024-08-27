@@ -21,9 +21,9 @@ export function Camera() {
 
     if (!permission.granted) {
         return (
-            <View>
-                <Text>Você precisa dar permissão para acesso à câmera</Text>
-                <Button onPress={requestPermission} title="grant permission" />
+            <View style={styles.cabecalho}>
+                <Text style={styles.aviso}>Você precisa dar permissão para acesso à câmera!</Text>
+                <Button onPress={requestPermission} title="conceder permissão" />
             </View>
         );
     }
@@ -53,10 +53,10 @@ export function Camera() {
             <ImageBackground source ={{uri: photo.uri}} style={styles.camera}>
                 <View style={styles.headerSave}>
                     <TouchableOpacity onPress={() => setPhoto(undefined)}>
-                        <AntDesign name="back" size={70} color={colors.black} />
+                        <AntDesign name="back" size={65} color={colors.white} />
                     </TouchableOpacity>
                     <TouchableOpacity onPress={savePhoto}>
-                        <AntDesign name="save" size={70} color={colors.black} />
+                        <AntDesign name="save" size={65} color={colors.white} />
                     </TouchableOpacity>
                 </View>
             </ImageBackground>
@@ -68,11 +68,13 @@ export function Camera() {
             <CameraView style={styles.camera} facing={facing} ref={ref}>
             <View style={styles.headerCamera}>
                 <TouchableOpacity onPress={toggleCameraFacing}>
-                    <AntDesign name="retweet" size={70} color={colors.black} />
+                    <AntDesign name="retweet" size={60} color={colors.white} />
                 </TouchableOpacity>
             </View>
-            <View>
-                <TouchableOpacity onPress={takePicture} style={styles.ball}/>
+            <View style={styles.footerCamera}>
+                <TouchableOpacity onPress={takePicture}>
+                    <AntDesign name="camera" size={60} color={colors.white}/>
+                </TouchableOpacity>
             </View>
         </CameraView>
         </View>

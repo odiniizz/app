@@ -19,9 +19,9 @@ export function Perfil() {
             <   View>
                 <View style={styles.sociais}>
                     <FontAwesome5 name="instagram" size={24} color="black" />
-                    <Text style={styles.textoSociais}>https://www.instagram.com/</Text>
+                    <Text style={styles.textoSociais}>https://www.instagram.com/odiniizz</Text>
                 </View>
-            </View >
+            </View>
             <ComponentButtonInterface title="Sair" type="primary"
                 onPressI={async () => await signOut()}
             />

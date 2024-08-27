@@ -12,19 +12,20 @@ export const cores = {
 export const stylesglobal = StyleSheet.create({
 
     cabecalho:{
-        alignSelf: "center"
+        alignSelf: "center",
+        paddingTop: 20
     },
 
     textoTitulo: {
         color: cores.black,
         fontSize: 60,
-        textAlign: 'center',
+        textAlign: "justify",
     },
 
     caixaDeTexto: {
         alignSelf: "center",
-        width: 350,
-        paddingTop: 90,
+        width: 400,
+        paddingTop: 30,
         paddingBottom: 30
     },
 
@@ -39,37 +40,6 @@ export const stylesglobal = StyleSheet.create({
         textAlign: 'center',
     },
 
-    caixaDeInformacao: {
-        width: 250,
-        backgroundColor: colors.secondary,
-        borderRadius: 10,
-        alignSelf: "center",
-        flexDirection: "row",
-        alignItems: "center",
-        justifyContent: "space-between",
-        marginVertical: 20
-    },
-
-    textoInformacao: {
-
-    },
-
-    caixaTextoInformacao: {
-        paddingEnd: 10
-    },
-
-    doce: {
-        height: 100,
-        width: 100
-    },
-
-    caixaDoce: {
-        paddingStart: 10
-    },
-
-    secao: {
-
-        justifyContent: "space-between"
-    }
+    
 
 })

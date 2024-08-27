@@ -6,6 +6,15 @@ export const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
     },
+
+    cabecalho: {
+        paddingTop: 50
+    },
+
+    aviso: {
+        textAlign: "center"
+    },
+
     message: {
         textAlign: "center",
         paddingBottom: 10,
@@ -16,20 +25,19 @@ export const styles = StyleSheet.create({
     headerCamera: {
         flex: 1,
         alignItems: "center",
+        paddingTop: 40
     },
+
     footerCamera: {
         flexDirection: 'row',
         marginBottom: 20,
         justifyContent: "center",
     },
-    ball: {
-        width: 70,
-        height: 70,
-        backgroundColor: colors.white,
-        borderRadius: 35,
-    },
+
     headerSave: {
-        flexDirection: 'row',
-        justifyContent: 'space-between',
+        flexDirection: "row",
+        justifyContent: "space-between",
+        paddingTop: 40,
+        marginHorizontal: 20
     },
 });
