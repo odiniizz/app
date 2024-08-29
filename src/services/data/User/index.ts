@@ -22,6 +22,14 @@ export interface IAuthenticated {
     }
 }
 
+export interface IError {
+    errors: {
+        rule: string
+        field: string
+        message: string
+    }[]
+}
+
 class UserData {
     register(data: IUser) {
         return api.post<IResponseUser>('/register', data)
