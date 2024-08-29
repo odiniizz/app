@@ -50,13 +50,6 @@ export function MenuTabs() {
                     ),
                 }}
             />
-            <Tab.Screen name="Perfil" component={ScreenPerfil}
-                options={{
-                    tabBarIcon: () => (
-                        <Ionicons name="person" size={24} color="black" />
-                    ),
-                }}
-            />
             <Tab.Screen name="Camera" component={ScreenCamera}
                 options={{
                     tabBarIcon: () => (
@@ -68,6 +61,13 @@ export function MenuTabs() {
                 options={{
                     tabBarIcon: () => (
                         <Ionicons name="images-outline" size={24} color="black" />
+                    ),
+                }}
+            />
+            <Tab.Screen name="Perfil" component={ScreenPerfil}
+                options={{
+                    tabBarIcon: () => (
+                        <Ionicons name="person" size={24} color="black" />
                     ),
                 }}
             />
