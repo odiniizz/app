@@ -1,5 +1,5 @@
 import { createBottomTabNavigator, BottomTabNavigationProp } from "@react-navigation/bottom-tabs";
-import { ScreenTelaInicial, ScreenReceitas, ScreenPerfil, ScreenCamera, ScreenImagens } from '../screens';
+import { ScreenTelaInicial, ScreenReceitas, ScreenPerfil, ScreenCamera, ScreenQrCode, ScreenImagens } from '../screens';
 import { colors } from '../styles/colors'
 import { Ionicons } from "@expo/vector-icons";
 import { MessageNavigation } from "./message.navigation"
@@ -10,6 +10,7 @@ type MenuTabParam = {
     Mensagem: undefined
     Perfil: undefined
     Camera: undefined
+    QrCode: undefined
     Imagens: undefined
 }
 type MenuScreenNavigation = BottomTabNavigationProp<MenuTabParam, "Home">
@@ -61,6 +62,13 @@ export function MenuTabs() {
                 options={{
                     tabBarIcon: () => (
                         <Ionicons name="images-outline" size={24} color="black" />
+                    ),
+                }}
+            />
+            <Tab.Screen name="QrCode" component={ScreenQrCode}
+                options={{
+                    tabBarIcon: () => (
+                        <Ionicons name="qr-code-outline" size={24} color="black" />
                     ),
                 }}
             />
