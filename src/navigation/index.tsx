@@ -2,8 +2,9 @@ import * as React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { LoginNavigation } from "./login.navigation";
 import { useAuth } from "../hook/auth";
-import { MenuTabs } from "./MenuBottomTab.navigation";
+import { DrawerNavigation } from './MenuDrawer.navigation';
 import { ComponentLoading } from "../components"
+
 
 
 export function Navigation(){
@@ -13,7 +14,7 @@ export function Navigation(){
     }
     return(
         <NavigationContainer>
-           {user?.token ? <MenuTabs/> : <LoginNavigation/>}
+           {user?.token ? <DrawerNavigation/> : <LoginNavigation/>}
         </NavigationContainer>
     );
 }

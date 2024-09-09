@@ -18,6 +18,5 @@ export function TelaInicial({ navigation }: MenuTabTypes) {
             <Image source={require('../../img/fome.png')} style={styles.img}/>
         </View>
         </>
-
     );
 }
