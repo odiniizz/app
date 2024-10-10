@@ -1,5 +1,5 @@
 import { DrawerNavigationProp, createDrawerNavigator } from '@react-navigation/drawer';
-import { ScreenTelaInicial ,ScreenPerfil, ScreenCamera, ScreenImagens, ScreenQrCode} from '../screens';
+import { ScreenTelaInicial ,ScreenPerfil, ScreenCamera, ScreenImagens, ScreenQrCode, ScreenLocation} from '../screens';
 import { MenuTabs } from './MenuBottomTab.navigation';
 
 type MenuDrawerParam = {
@@ -8,6 +8,7 @@ type MenuDrawerParam = {
     Camera: undefined
     QrCode: undefined
     Imagens: undefined
+    Localizacao: undefined
 }
 type MenuScreenNavigation = DrawerNavigationProp<MenuDrawerParam, "TelaInicial">
 export type DrawerTypes = {
@@ -23,6 +24,7 @@ export function DrawerNavigation() {
             <Drawer.Screen name="Camera" component={ScreenCamera} />
             <Drawer.Screen name="QrCode" component={ScreenQrCode} />
             <Drawer.Screen name="Imagens" component={ScreenImagens} />
+            <Drawer.Screen name="Localizacao" component={ScreenLocation} />
         </Drawer.Navigator>
     );
 }
